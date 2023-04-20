@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<AssemblyName>Exos.MinimalPlatformApi</AssemblyName>
+		<RootNamespace>Exos.MinimalPlatformApi</RootNamespace>
+		<UserSecretsId>084f81b2-3b63-4ad6-b55d-3884b8bc02e8</UserSecretsId>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\Exos.Platform\Exos.Platform.csproj" />
+	</ItemGroup>
+
+</Project>

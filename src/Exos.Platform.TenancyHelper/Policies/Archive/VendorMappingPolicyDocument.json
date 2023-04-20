@@ -1,0 +1,46 @@
+﻿{
+  "id": "",
+  "cosmosDocType": "VendorMappingPolicyDocument",
+  "vendorId": "VendorMappingPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "EXOSEntityManagementDB",
+    "schemaName": "vm",
+    "tableName": "VendorMapping"
+  },
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": -1,
+    "subContractorTenantId": -1,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": {
+      "ifCreatedByServicer": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": -3
+        }
+      }
+    }
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": -1,
+    "subContractorTenantId": -1,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": {
+      "ifCreatedByServicer": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": -3
+        }
+      }
+
+    }
+  }
+
+}

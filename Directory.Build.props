@@ -1,0 +1,47 @@
+<Project>
+
+  <PropertyGroup>
+    <Authors>Architecture Team</Authors>
+    <PackageTags>Exos;Architecture;Platform</PackageTags>
+    <PackageProjectUrl>https://dev.azure.com/ServiceLink/Architecture/_git/Platform</PackageProjectUrl>
+    <RepositoryUrl>https://ServiceLink@dev.azure.com/ServiceLink/Architecture/_git/Platform</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>Platform support for EXOS services.</Description>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSource>true</IncludeSource>
+    <IncludeSymbols>true</IncludeSymbols>
+    <!--<SymbolPackageFormat>snupkg</SymbolPackageFormat>-->
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Version>12.1.7</Version>
+    <Product>EXOS</Product>
+    <Company>ServiceLink IP Holding Company, LLC</Company>
+    <Copyright>TM (C) $([System.DateTime]::Now.ToString("yyyy")) ServiceLink IP Holding Company, LLC, and/or affiliate. All rights reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoWarn>1701;1702;1591;CA1014;CA1848;CA2254;CA1727;CA1002;CA2253</NoWarn>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <LangVersion>latest</LangVersion>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <Deterministic>true</Deterministic>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!--<Nullable>enable</Nullable>-->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(MSBuildProjectName.EndsWith('Test')) Or $(MSBuildProjectName.EndsWith('Tests')) Or $(MSBuildProjectName.EndsWith('Benchmarks'))">
+    <!-- Additional overrides for test projects -->
+    <NoWarn>$(NoWarn);SA1600;CA1707</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.AzureRepos.Git" Version="1.1.1" PrivateAssets="all"/>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="all" />
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Link="stylecop.json" Visible="false" />
+  </ItemGroup>
+
+</Project>

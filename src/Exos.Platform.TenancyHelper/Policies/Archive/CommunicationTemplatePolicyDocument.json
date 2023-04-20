@@ -1,0 +1,31 @@
+﻿{
+  "id": "",
+  "cosmosDocType": "CommunicationTemplatePolicyDocument",
+  "partitionKey": "CommunicationTemplatePolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "EXOSEntityManagementDB",
+    "schemaName": "vm",
+    "tableName": "CommunicationTemplate"
+  },
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": 0,
+    "subContractorTenantId": 0,
+    "servicerGroupTenantId": 1,
+    "servicerTenantId": -1
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": 0,
+    "subContractorTenantId": 0,
+    "servicerGroupTenantId": 1,
+    "servicerTenantId":-1
+  }
+
+}

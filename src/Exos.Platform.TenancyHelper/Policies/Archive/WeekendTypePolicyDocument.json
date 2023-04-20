@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "cosmosDocType": "WeekendTypePolicyDocument",
+  "clientId": "WeekendTypePolicyDocument",
+
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "WeekendType"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true
+}

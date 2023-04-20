@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Description>Metapackage containing all Exos.Platform packages.</Description>
+    <PackageTags>Exos;Architecture;Platform;Metapackage</PackageTags>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Exos.Platform.AspNetCore\Exos.Platform.AspNetCore.csproj" />
+    <ProjectReference Include="..\Exos.Platform.BuildInformation\Exos.Platform.BuildInformation.csproj" />
+    <ProjectReference Include="..\Exos.Platform.DistributedCache\Exos.Platform.DistributedCache.csproj" />
+    <ProjectReference Include="..\Exos.Platform.ICTLibrary\Exos.Platform.ICTLibrary.csproj" />
+    <ProjectReference Include="..\Exos.Platform.Messaging\Exos.Platform.Messaging.csproj" />
+    <ProjectReference Include="..\Exos.Platform.Persistence\Exos.Platform.Persistence.csproj" />
+    <ProjectReference Include="..\Exos.Platform.TenancyHelper\Exos.Platform.TenancyHelper.csproj" />
+    <ProjectReference Include="..\Exos.Platform.VersionEndpoint\Exos.Platform.VersionEndpoint.csproj" />
+  </ItemGroup>
+
+</Project>

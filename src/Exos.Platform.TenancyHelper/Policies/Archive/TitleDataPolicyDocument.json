@@ -1,0 +1,31 @@
+﻿{
+  "id": "",
+  "cosmosDocType": "TitleDataPolicyDocument",
+  "productId": "TitleDataPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "ExosTitleDB",
+    "schemaName": "vm",
+    "tableName": "TitleData"
+  },
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": -1,
+    "subContractorTenantId": -1,
+    "servicerGroupTenantId": 1,
+    "servicerTenantId": -1
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": -1,
+    "subContractorTenantId": -1,
+    "servicerGroupTenantId": 1,
+    "servicerTenantId": -1
+  }
+
+}

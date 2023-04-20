@@ -1,0 +1,15 @@
+{
+  "id": "",
+  "cosmosDocType": "AppraisalSoftwarePolicyDocument",
+  "vendorId": "AppraisalSoftwarePolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "AppraisalSoftware"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": false,
+  "isUpdateToTenantIdsPermitted": false
+}

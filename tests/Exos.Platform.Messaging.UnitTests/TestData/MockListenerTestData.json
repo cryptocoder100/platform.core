@@ -1,0 +1,110 @@
+{
+  "MessageEntities": [
+    {
+      "MessageEntityId": 1,
+      "NameSpace": "ActiveConnectionString",
+      "PassiveNameSpace": "PassiveConnectionString",
+      "ConnectionString": "Endpoint=sb://active-sb-namespace.servicebus.windows.net/;SharedAccessKeyName=rule;SharedAccessKey=_not_a_key_",
+      "PassiveConnectionString": "Endpoint=sb://passive-sb-namespace.servicebus.windows.net/;SharedAccessKeyName=rule;SharedAccessKey=_not_a_key_",
+      "MaxRetryCount": 3,
+      "ServiceBusEntityType": "Topic",
+      "EntityName": "mock_entity_1",
+      "MessageContext": null,
+      "Owner": "mock_owner_1",
+      "Status": "ACTIVE",
+      "Comments": "mock entity for topic"
+    },
+    {
+      "MessageEntityId": 2,
+      "NameSpace": "ActiveConnectionString",
+      "PassiveNameSpace": "PassiveConnectionString",
+      "ConnectionString": "Endpoint=sb://active-sb-namespace.servicebus.windows.net/;SharedAccessKeyName=rule;SharedAccessKey=_not_a_key_",
+      "PassiveConnectionString": "Endpoint=sb://passive-sb-namespace.servicebus.windows.net/;SharedAccessKeyName=rule;SharedAccessKey=_not_a_key_",
+      "MaxRetryCount": 3,
+      "ServiceBusEntityType": "Queue",
+      "EntityName": "mock_entity_2",
+      "MessageContext": null,
+      "Owner": "mock_owner_2",
+      "Status": "ACTIVE",
+      "Comments": "mock entity for queue"
+    },
+    {
+      "MessageEntityId": 4,
+      "NameSpace": "ActiveConnectionString",
+      "PassiveNameSpace": "PassiveConnectionString",
+      "ConnectionString": "Endpoint=sb://active-sb-namespace.servicebus.windows.net/;SharedAccessKeyName=rule;SharedAccessKey=_not_a_key_",
+      "PassiveConnectionString": "Endpoint=sb://passive-sb-namespace.servicebus.windows.net/;SharedAccessKeyName=rule;SharedAccessKey=_not_a_key_",
+      "MaxRetryCount": 3,
+      "ServiceBusEntityType": "Topic",
+      "EntityName": "mock_entity_4",
+      "MessageContext": null,
+      "Owner": "mock_owner_4",
+      "Status": "INACTIVE",
+      "Comments": "mock entity for inactive topic"
+    },
+    {
+      "MessageEntityId": 5,
+      "NameSpace": "ActiveConnectionString",
+      "PassiveNameSpace": "PassiveConnectionString",
+      "ConnectionString": "Endpoint=sb://active-sb-namespace.servicebus.windows.net/;SharedAccessKeyName=rule;SharedAccessKey=_not_a_key_",
+      "PassiveConnectionString": "Endpoint=sb://active-sb-namespace.servicebus.windows.net/;SharedAccessKeyName=rule;SharedAccessKey=_not_a_key_",
+      "MaxRetryCount": 3,
+      "ServiceBusEntityType": "Topic",
+      "EntityName": "mock_entity_5",
+      "MessageContext": null,
+      "Owner": "mock_owner_5",
+      "Status": "ACTIVE",
+      "Comments": "mock entity for topic with same namespaces"
+    }
+  ],
+  "Listeners": [
+    {
+      "EntityName": "mock_entity_1",
+      "EntityOwner": "mock_owner_1",
+      "NumberOfThreads": "1",
+      "RetryCount": "1",
+      "SubscriptionName": "mock_subscription_1",
+      "EntityDescription": "topic subscription listener config",
+      "Processor": "Exos.Platform.Messaging.Core.Listener.DefaultTopicProcessor, Exos.Platform.Messaging",
+      "DisabledFlg": false
+    },
+    {
+      "EntityName": "mock_entity_2",
+      "EntityOwner": "mock_owner_2",
+      "NumberOfThreads": "1",
+      "RetryCount": "1",
+      "EntityDescription": "queue listener config",
+      "Processor": "Exos.Platform.Messaging.Core.Listener.DefaultTopicProcessor, Exos.Platform.Messaging",
+      "DisabledFlg": false
+    },
+    {
+      "EntityName": "mock_entity_3",
+      "EntityOwner": "mock_owner_3",
+      "NumberOfThreads": "1",
+      "RetryCount": "1",
+      "EntityDescription": "queue listener config without message entity in db",
+      "Processor": "Exos.Platform.Messaging.Core.Listener.DefaultTopicProcessor, Exos.Platform.Messaging",
+      "DisabledFlg": false
+    },
+    {
+      "EntityName": "mock_entity_4",
+      "EntityOwner": "mock_owner_4",
+      "NumberOfThreads": "1",
+      "RetryCount": "1",
+      "SubscriptionName": "mock_subscription_4",
+      "EntityDescription": "topic subscription listener config disabled",
+      "Processor": "Exos.Platform.Messaging.Core.Listener.DefaultTopicProcessor, Exos.Platform.Messaging",
+      "DisabledFlg": true
+    },
+    {
+      "EntityName": "mock_entity_5",
+      "EntityOwner": "mock_owner_5",
+      "NumberOfThreads": "1",
+      "RetryCount": "1",
+      "SubscriptionName": "mock_subscription_5",
+      "EntityDescription": "topic subscription listener config with same primary and secondary namespaces",
+      "Processor": "Exos.Platform.Messaging.Core.Listener.DefaultTopicProcessor, Exos.Platform.Messaging",
+      "DisabledFlg": false
+    }
+  ]
+}

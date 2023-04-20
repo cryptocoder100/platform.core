@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "cosmosDocType": "DocumentDeliveryPolicyDocument",
+  "clientId": "DocumentDeliveryPolicyDocument",
+
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "DocumentDelivery"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true
+}

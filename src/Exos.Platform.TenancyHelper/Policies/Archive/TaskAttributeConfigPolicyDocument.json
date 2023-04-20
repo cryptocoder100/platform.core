@@ -1,0 +1,91 @@
+{
+  "id": "",
+  "cosmosDocType": "TaskAttributeConfigPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "tm",
+    "tableName": "TaskAttributeConfig"
+  },
+  "isCacheable": false,
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": -1,
+    "subContractorTenantId": -1,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": {
+      "ifCreatedByServicer": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": -3
+        }
+      },
+      "ifCreatedByVendor": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": {
+            "useContextField": {
+              "IfPresent": "ServicerTenantId",
+              "Else": -1
+            }
+          }
+        }
+      },
+      "ifCreatedBySubContractor": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": {
+            "useContextField": {
+              "IfPresent": "ServicerTenantId",
+              "Else": -1
+            }
+          }
+        }
+      }
+
+    }
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": -1,
+    "subContractorTenantId": -1,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": {
+      "ifCreatedByServicer": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": -3
+        }
+      },
+      "ifCreatedByVendor": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": {
+            "useContextField": {
+              "IfPresent": "ServicerTenantId",
+              "Else": -1
+            }
+          }
+        }
+      },
+      "ifCreatedBySubContractor": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": {
+            "useContextField": {
+              "IfPresent": "ServicerTenantId",
+              "Else": -1
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+}

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Exos.Platform.Messaging.Concurrent.ConcurrentHitCounter">
+    <Position X="6.25" Y="9.75" Width="3.25" />
+    <Members>
+      <Field Name="_durationSpan" Hidden="true" />
+      <Method Name="ConcurrentHitCounter" Hidden="true" />
+      <Method Name="Reset" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAABAAAIAAAEAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Concurrent\ConcurrentHitCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exos.Platform.Messaging.Core.ExosTopicClientPool" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="5.5" Width="2.75" />
+    <InheritanceLine Type="Exos.Platform.Messaging.Core.ExosClientEntityPool&lt;T&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.188" Y="5.312" />
+        <Point X="6.188" Y="5.875" />
+        <Point X="6.5" Y="5.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\ExosTopicClientPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exos.Platform.Messaging.Core.FailoverOnExcessiveExceptionPolicy&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="7.25" Width="3.25" />
+    <Members>
+      <Field Name="_config" Hidden="true" />
+      <Field Name="_shouldFailover" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACEgAAAACAAAAAAAAAAAAAAAAAAAgAAEAAA=</HashCode>
+      <FileName>Core\FailoverOnExcessiveExceptionPolicy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="Exos.Platform.Messaging.Core.MqMessagePublisher" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="1.75" Width="4" />
+    <Members>
+      <Field Name="_logger" Hidden="true" />
+      <Field Name="_messagePublisherOptions" Hidden="true" />
+      <Field Name="_serviceProvider" Hidden="true" />
+      <Field Name="_tokenProvider" Hidden="true" />
+      <Property Name="Environment" Hidden="true" />
+      <Method Name="GetPartitionKey" Hidden="true" />
+      <Method Name="MqMessagePublisher" Hidden="true" />
+      <Method Name="SendToEventHub" Hidden="true" />
+      <Method Name="WriteToEventHub" Hidden="true" />
+      <Method Name="WriteToTopicUsingAliasFullyQualifieddDomainName" Hidden="true" />
+      <Method Name="WriteToTopicUsingPrimarySecondaryNamespace" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AkAAQAECABAAQAAAwAAAAAAAIABAAAEAAAAAIAABABA=</HashCode>
+      <FileName>Core\MqMessagePublisher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="Exos.Platform.Messaging.Core.Listener.ExosMessageListener" BaseTypeListCollapsed="true">
+    <Position X="1.5" Y="12.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AACMAAAABABEAIAAEAABAAAAIAAAAgAAAAAAAAAQAAA=</HashCode>
+      <FileName>Core\Listener\ExosMessageListener.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Exos.Platform.Messaging.Core.Listener.MessageQueueConsumer">
+    <Position X="6.75" Y="15.25" Width="2.75" />
+    <InheritanceLine Type="Exos.Platform.Messaging.Core.Listener.MessageConsumer" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="16.75" />
+        <Point X="6.649" Y="16.75" />
+        <Point X="6.649" Y="16.75" />
+        <Point X="6.75" Y="16.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAIAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Core\Listener\MessageQueueConsumer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exos.Platform.Messaging.Core.Listener.MessageTopicConsumer">
+    <Position X="6.75" Y="12.75" Width="2.75" />
+    <InheritanceLine Type="Exos.Platform.Messaging.Core.Listener.MessageConsumer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="16.75" />
+        <Point X="6.649" Y="16.75" />
+        <Point X="6.649" Y="14.5" />
+        <Point X="6.75" Y="14.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAABIAAAAAA=</HashCode>
+      <FileName>Core\Listener\MessageTopicConsumer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exos.Platform.Messaging.Core.ExosQueueClientPool" Collapsed="true">
+    <Position X="6.5" Y="6.25" Width="2.75" />
+    <InheritanceLine Type="Exos.Platform.Messaging.Core.ExosClientEntityPool&lt;T&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.188" Y="5.312" />
+        <Point X="6.188" Y="6.688" />
+        <Point X="6.5" Y="6.688" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAEAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\ExosQueueClientPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exos.Platform.Messaging.Core.ExosClientEntityPool&lt;T&gt;" Collapsed="true">
+    <Position X="6" Y="4.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAEQAAEAAAgBgIARAAAAAAAAAAAAEAAAAAJAAAAAA=</HashCode>
+      <FileName>Core\ExosClientEntityPool.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="Exos.Platform.Messaging.Core.FailoverOnExcessiveTopicExceptionPolicy" Collapsed="true">
+    <Position X="6.5" Y="8" Width="3" />
+    <InheritanceLine Type="Exos.Platform.Messaging.Core.FailoverOnExcessiveExceptionPolicy&lt;T&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.217" Y="7.812" />
+        <Point X="6.217" Y="8.375" />
+        <Point X="6.5" Y="8.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\FailoverOnExcessiveTopicExceptionPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exos.Platform.Messaging.Core.FailoverOnExcessiveQueueExceptionPolicy" Collapsed="true">
+    <Position X="6.5" Y="8.75" Width="3" />
+    <InheritanceLine Type="Exos.Platform.Messaging.Core.FailoverOnExcessiveExceptionPolicy&lt;T&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.217" Y="7.812" />
+        <Point X="6.217" Y="9.062" />
+        <Point X="6.5" Y="9.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\FailoverOnExcessiveQueueExceptionPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exos.Platform.Messaging.Core.Listener.MessageConsumer" Collapsed="true">
+    <Position X="1.75" Y="16.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAQEAAAAAAAAAICAAAAQAAIIAhAAABAQAAAACAAQA=</HashCode>
+      <FileName>Core\Listener\MessageConsumer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Exos.Platform.Messaging.Core.IFailoverPolicy&lt;T&gt;">
+    <Position X="2" Y="7" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\IFailoverPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exos.Platform.Messaging.Core.IExosClientEntityPool&lt;T&gt;">
+    <Position X="2" Y="4.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAEAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\IExosClientEntityPool.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

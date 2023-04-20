@@ -1,0 +1,14 @@
+﻿{
+  "id": "",
+  "cosmosDocType": "VendorIdDispenserPolicyDocument",
+  "vendorId": "VendorIdDispenserPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "VendorIdDispenser"
+  },
+  "isSubjectToMultiTenancy": false,
+  "isUpdateToTenantIdsPermitted": false
+}

@@ -1,0 +1,29 @@
+{
+  "id": "",
+  "cosmosDocType": "ServicerGroupPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "ServicerGroup"
+  },
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": 0,
+    "subClientTenantId": 0,
+    "vendorTenantId": 0,
+    "subContractorTenantId": 0,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": -1
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": 0,
+    "subClientTenantId": 0,
+    "vendorTenantId": 0,
+    "subContractorTenantId": 0,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": -1
+  }
+}

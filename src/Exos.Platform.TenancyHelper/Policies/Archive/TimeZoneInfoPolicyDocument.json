@@ -1,0 +1,15 @@
+﻿{
+  "id": "",
+  "cosmosDocType": "TimeZoneInfoPolicyDocument",
+  "partitionKey": "TimeZoneInfoPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "EXOSEntityManagementDB",
+    "schemaName": "vm",
+    "tableName": "TimeZoneInfo"
+  },
+  "isSubjectToMultiTenancy": false,
+  "isCacheable": true
+
+}

@@ -1,0 +1,31 @@
+# root = true
+
+[*.cs]
+# csharp_new_line_before_open_brace = methods
+indent_size = 4
+indent_style = space
+trim_trailing_whitespace = true
+
+dotnet_diagnostic.SA1101.severity=silent # Prefix local calls with this
+dotnet_diagnostic.SA1116.severity=silent # Split parameters should start on line after declaration
+dotnet_diagnostic.SA1127.severity=silent # Generic type constraints should be on their own line
+dotnet_diagnostic.SA1128.severity=silent # Put constructor initializers on their own line
+dotnet_diagnostic.SA1200.severity=silent # Using directives should be placed correctly
+dotnet_diagnostic.SA1309.severity=silent # Field names should not begin with underscore
+dotnet_diagnostic.SA1405.severity=silent # Debug.Assert should provide message text
+dotnet_diagnostic.SA1413.severity=silent # Use trailing comma in multi-line initializers
+dotnet_diagnostic.SA1512.severity=silent # Single-line comments should not be followed by blank line
+dotnet_diagnostic.SA1515.severity=silent # Single-line comment should be preceded by blank line
+dotnet_diagnostic.SA1609.severity=silent # Property documentation should have value
+dotnet_diagnostic.SA1615.severity=silent # Element return value should be documented
+dotnet_diagnostic.SA1633.severity=silent # File should have header
+dotnet_diagnostic.CA1014.severity=silent # Mark assemblies with CLSCompliant
+dotnet_diagnostic.CA1303.severity=silent # Do not pass literals as localized parameters
+dotnet_diagnostic.CA1308.severity=silent # Normalize strings to uppercase
+dotnet_diagnostic.CA1508.severity=silent # Avoid dead conditional code
+dotnet_diagnostic.CA2007.severity=silent # Consider calling ConfigureAwait on the awaited task
+
+[*.{json,xml,csproj,props,targets}]
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true

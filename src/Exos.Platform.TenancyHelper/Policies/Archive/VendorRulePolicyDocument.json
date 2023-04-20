@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "cosmosDocType": "VendorRulePolicyDocument",
+  "clientId": "VendorRulePolicyDocument",
+  
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "VendorRule"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true
+}

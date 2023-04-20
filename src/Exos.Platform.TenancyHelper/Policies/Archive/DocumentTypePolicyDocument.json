@@ -1,0 +1,15 @@
+{
+  "id": "",
+  "cosmosDocType": "DocumentTypePolicyDocument",
+  "vendorId": "DocumentTypePolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "DocumentType"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": false,
+  "isUpdateToTenantIdsPermitted": false
+}

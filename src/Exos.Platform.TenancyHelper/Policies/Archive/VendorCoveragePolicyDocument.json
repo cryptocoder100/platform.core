@@ -1,0 +1,99 @@
+﻿{
+  "id": "",
+  "cosmosDocType": "VendorCoveragePolicyDocument",
+  "vendorId": "VendorCoveragePolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "VendorCoverage"
+  },
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": 0,
+    "subClientTenantId": 0,
+    "vendorTenantId": {
+      "useSourceField": "VendorId"
+    },
+    "subContractorTenantId": {
+      "useSourceField": "SubContractorId"
+    },
+    "servicerGroupTenantId": 1,
+    "servicerTenantId": {
+      "ifCreatedByServicer": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": -3
+        }
+      },
+      "ifCreatedByVendor": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": {
+            "useContextField": {
+              "IfPresent": "ServicerTenantId",
+              "Else": -1
+            }
+          }
+        }
+      },
+      "ifCreatedBySubContractor": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": {
+            "useContextField": {
+              "IfPresent": "ServicerTenantId",
+              "Else": -1
+            }
+          }
+        }
+      }
+
+    }
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": 0,
+    "subClientTenantId": 0,
+     "vendorTenantId": {
+      "useSourceField": "VendorId"
+    },
+    "subContractorTenantId": {
+      "useSourceField": "SubContractorId"
+    },
+    "servicerGroupTenantId": 1,
+    "servicerTenantId": {
+      "ifCreatedByServicer": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": -3
+        }
+      },
+      "ifCreatedByVendor": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": {
+            "useContextField": {
+              "IfPresent": "ServicerTenantId",
+              "Else": -1
+            }
+          }
+        }
+      },
+      "ifCreatedBySubContractor": {
+        "useSourceField": {
+          "IfPresent": "ServicerIds",
+          "Else": {
+            "useContextField": {
+              "IfPresent": "ServicerTenantId",
+              "Else": -1
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+}

@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "cosmosDocType": "ClientNoteTypePolicyDocument",
+  "clientId": "ClientNoteTypePolicyDocument",
+
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "ClientNoteType"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true
+}

@@ -1,0 +1,31 @@
+{
+  "id": "FAE6A0CF-AA41-48A0-A2F8-B013AC6849B9",
+  "cosmosDocType": "DataMappingConfigurationPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "EXOSEntityManagementDB",
+    "schemaName": "vm",
+    "tableName": "DataMappingConfiguration"
+  },
+  "partitionKey": "DataMappingConfigurationPolicyDocument",
+  "isSubjectToMultiTenancy": true,
+  "isCacheable": false,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": -1,
+    "subContractorTenantId": -1,
+    "servicerGroupTenantId": 1,
+    "servicerTenantId": -1
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": -1,
+    "subContractorTenantId": -1,
+    "servicerGroupTenantId": 1,
+    "servicerTenantId": -1
+  }
+}

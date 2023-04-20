@@ -1,0 +1,39 @@
+﻿{
+  "id": "",
+  "cosmosDocType": "SubClientProfilePolicyDocument",
+  "clientId": "SubClientProfilePolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "EXOSEntityManagementDB",
+    "schemaName": "vm",
+    "tableName": "SubClientProfile"
+  },
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": {
+      "useSourceField": "ClientId"
+    },
+    "subClientTenantId": {
+      "useSourceField": "SubClientId"
+    },
+    "vendorTenantId": 0,
+    "subContractorTenantId": 0,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": -1
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": {
+      "useSourceField": "ClientId"
+    },
+    "subClientTenantId": {
+      "useSourceField": "SubClientId"
+    },
+    "vendorTenantId": 0,
+    "subContractorTenantId": 0,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": -1
+  }
+
+}

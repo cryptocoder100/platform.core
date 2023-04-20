@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "cosmosDocType": "PriorOrderActionPolicyDocument",
+  "clientId": "PriorOrderActionPolicyDocument",
+
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "PriorOrderAction"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true
+}

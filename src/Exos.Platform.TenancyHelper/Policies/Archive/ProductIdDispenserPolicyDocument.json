@@ -1,0 +1,14 @@
+﻿{
+  "id": "",
+  "cosmosDocType": "ProductIdDispenserPolicyDocument",
+  "productId": "ProductIdDispenserPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "EXOSEntityManagementDB",
+    "schemaName": "vm",
+    "tableName": "ProductIdDispenser"
+  },
+  "isSubjectToMultiTenancy": false,
+  "isUpdateToTenantIdsPermitted": false
+}

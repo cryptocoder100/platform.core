@@ -1,0 +1,36 @@
+{
+  "id": "",
+  "cosmosDocType": "MasterclientUserPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "User"
+  },
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": {
+      "useSourceField": "TenantId"
+    },
+    "subClientTenantId": 0,
+    "vendorTenantId": 0,
+    "subContractorTenantId": 0,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": -1
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": {
+      "useSourceField": "TenantId"
+    },
+    "subClientTenantId": 0,
+    "vendorTenantId": {
+      "useSourceField": "TenantId"
+    },
+    "subContractorTenantId": 0,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": -1
+  }
+
+}

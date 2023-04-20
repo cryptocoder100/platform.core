@@ -1,0 +1,14 @@
+{
+  "id": "",
+  "cosmosDocType": "UserIdDispenserPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "UserIdDispenser"
+  },
+
+  "isSubjectToMultiTenancy": false,
+  "isUpdateToTenantIdsPermitted": false
+}

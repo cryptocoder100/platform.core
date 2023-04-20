@@ -1,0 +1,13 @@
+{
+  "id": "",
+  "cosmosDocType": "AssignmentVendorTrackingPolicyDocument",
+  "vendorId": "AssignmentVendorTrackingPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "AssignmentVendorTracking"
+  },
+  "isSubjectToMultiTenancy": false
+}

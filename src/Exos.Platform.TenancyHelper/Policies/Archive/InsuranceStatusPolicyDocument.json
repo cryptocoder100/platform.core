@@ -1,0 +1,15 @@
+{
+  "id": "",
+  "cosmosDocType": "InsuranceStatusPolicyDocument",
+  "vendorId": "InsuranceStatusPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "InsuranceStatus"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true
+}

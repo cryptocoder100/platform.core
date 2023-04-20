@@ -1,0 +1,169 @@
+﻿{
+  "cosmosDocType": "multiTenantPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "sql",
+    "databaseName": "database",
+    "schemaName": "adm",
+    "tableName": "MasterClientProfile"
+  },
+  "isSubjectToMultiTenancy": true,
+
+  "onInsertTenantIdsPolicy7": {
+    "clientTenantId": {
+
+      "ifSourceFieldIsNotNull": {
+        "sourceField": "fieldTwo",
+        "useSourceField": "fieldTwo"
+      },
+      "ifSourceFieldIsNull": 0
+    },
+
+    "vendorTenantId": 0,
+    "servicerTenantId": -1,
+    "servicerGroupTenantId": -2
+  },
+
+
+  "onInsertTenantIdsPolicy1": {
+    "clientTenantId": {
+      "useContextField": "MasterClientProfileId"
+    },
+    "vendorTenantId": 0,
+    "servicerTenantId": -1,
+    "servicerGroupTenantId": -2
+  },
+
+  "onInsertTenantIdsPolicy2": {
+    "clientTenantId": -3,
+
+    "vendorTenantId": 0,
+    "servicerTenantId": -1,
+    "servicerGroupTenantId": -2
+  },
+
+  "onInsertTenantIdsPolicy3": {
+    "clientTenantId": [
+      {
+        "ifCreatedByClient": -3
+      },
+      { "ifCreatedByServicer": -3 },
+      {
+        "ifCreatedByVendor": {
+          "useContextField": "MasterClientProfileId"
+        }
+      },
+      {
+        "ifCreatedBySubcontractor": {
+          "useInstanceField": "MasterClientProfileId"
+        }
+      }
+    ]
+  },
+  "onInsertTenantIdsPolicy": {
+    "clientTenantId": 0,
+    "vendorTenantId": {
+      "ifCreatedByVendor": -3,
+      "ifCreatedByServicer": {
+        "useSourceField": "VendorProfileId"
+      }
+    },
+    "subContractorTenantId": 0,
+    "servicerTenantId": {
+      "ifCreatedByServicer": {
+        "useSourceField": {
+          "IfPresent": "ServicerId",
+          "Else": {
+            "useSourceField": {
+              "IfPresent": "ServicerId",
+              "Else": -2
+            }
+          }
+        }
+      },
+      "ifCreatedByendor": {
+        "useSourceField": {
+          "IfPresent": "ServicerId",
+          "Else": -2
+        }
+      }
+
+    },
+    "servicerGroupTenantId": -2
+  },
+    "onInsertTenantIdsPolicyWorking": {
+      "clientTenantId": {
+        "ifCreatedByClient": -3,
+        "ifCreatedByServicer": {
+          "useContextField": "MasterClientProfileId"
+        },
+        "ifCreatedByVendor": {
+          "useContextField": "MasterClientProfileId"
+        },
+        "ifCreatedBySubcontractor": {
+          "useInstanceField": "MasterClientProfileId"
+        }
+
+      },
+      "vendorTenantId": {
+        "useContextField": "MasterClientProfileId",
+        "ifSourceFieldIsNotNull": {
+          "sourceField": "fieldTwo",
+          "useSourceField": "MasterClientProfileId"
+        },
+        "ifSourceFieldIsNull": 0
+      },
+
+      "subcontractorTenantId": -50,
+      "servicerGroupTenantId": {
+        "useContextField": "ServicerGroupId"
+      },
+      "servicerTenantId": -2,
+      "isUpdateToTenantIdsPermitted": true
+
+    },
+    "onUpdateTenantIdsPolicy": {
+      "clientTenantId": {
+        "ifCreatedByClient": -3,
+        "ifCreatedByServicer": {
+          "useContextField": "MasterClientProfileId"
+        },
+        "ifCreatedByVendor": {
+          "useContextField": "MasterClientProfileId"
+        },
+        "ifCreatedBySubcontractor": {
+          "useInstanceField": "MasterClientProfileId"
+        }
+
+      },
+      "vendorTenantId": {
+        "useContextField": "MasterClientProfileId",
+        "ifSourceFieldIsNotNull": {
+          "sourceField": "fieldTwo",
+          "useSourceField": "MasterClientProfileId"
+        },
+        "ifSourceFieldIsNull": 0
+      },
+
+      "subcontractorTenantId": -50,
+      "servicerGroupTenantId": {
+        "useContextField": "ServicerGroupId"
+      },
+      "servicerTenantId": -2,
+      "isUpdateToTenantIdsPermitted": true
+
+    },
+    "onInsertTenantIdsPolicy8": {
+      "clientTenantId": 50,
+      "isUpdateToTenantIdsPermitted": true
+
+    },
+    "onInsertTenantIdsPolicy11": {
+      "clientTenantId": {
+        "useContextField": "externalMasterId"
+      },
+      "isUpdateToTenantIdsPermitted": true
+
+    }
+
+  }

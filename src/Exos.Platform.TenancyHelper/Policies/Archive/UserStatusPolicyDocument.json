@@ -1,0 +1,14 @@
+{
+  "id": "",
+  "cosmosDocType": "UserStatusPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "UserStatus"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": false,
+  "isUpdateToTenantIdsPermitted": false
+}

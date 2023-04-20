@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <NoWarn>1701;1702;1591;SA1600</NoWarn>
+    <UserSecretsId>e238b8b4-e602-4881-ab5f-52f39db24d62</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Exos.Platform\Exos.Platform.csproj" />
+  </ItemGroup>
+
+</Project>

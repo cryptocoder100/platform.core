@@ -1,0 +1,18 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "FeatureFlagSample": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5239",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        //"HTTP_PROXY": "127.0.0.1:8888",
+        //"HTTPS_PROXY": "127.0.0.1:8888",
+        //"NO_PROXY": "169.254.169.254"
+      }
+    }
+  }
+}

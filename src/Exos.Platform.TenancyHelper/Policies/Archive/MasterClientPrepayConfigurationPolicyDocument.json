@@ -1,0 +1,24 @@
+{
+  "id": "b6d13730-a622-3c50-1288-f25768a7b23f",
+  "cosmosDocType": "MasterClientPrepayConfigurationPolicyDocument",
+  "clientId": "MasterClientPrepayConfigurationPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "EXOSEntityManagementDB",
+    "schemaName": "vm",
+    "tableName": "MasterClientPrepayConfiguration"
+  },
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": false,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": {
+      "useSourceField": "ClientId"
+    },
+    "subClientTenantId": 0,
+    "vendorTenantId": 0,
+    "subContractorTenantId": 0,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": -1
+  }
+}

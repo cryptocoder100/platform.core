@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Description>Support for Azure ServiceBus and EventHubs in EXOS.</Description>
+    <PackageTags>Exos;Architecture;Platform;Messaging</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Microsoft.Azure.EventHubs" Version="4.3.2" />
+    <PackageReference Include="Microsoft.Azure.EventHubs.Processor" Version="4.3.2" />
+    <PackageReference Include="Microsoft.Azure.Management.ServiceBus" Version="4.0.0" />
+    <PackageReference Include="Microsoft.Azure.ServiceBus" Version="5.2.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Exos.Platform.AspNetCore\Exos.Platform.AspNetCore.csproj" />
+  </ItemGroup>
+
+</Project>

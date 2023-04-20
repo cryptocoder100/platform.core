@@ -1,0 +1,37 @@
+{
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "sql",
+    "databaseName": "OrderManagementDB",
+    "schemaName": "cnt",
+    "tableName": "OrderContact"
+  },
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": {
+      "useContextField": "ClientTenantId"
+    },
+    "subClientTenantId": {
+      "useContextField": "SubClientTenantId"
+    },
+    "vendorTenantId": 0,
+    "subContractorTenantId": 0,
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": {
+      "useContextField": "TenantId"
+    }
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": -4,
+    "subClientTenantId": -4,
+    "vendorTenantId": {
+      "useContextField": "VendorTenantId"
+    },
+    "subContractorTenantId": {
+      "useContextField": "SubContractorTenantId"
+    },
+    "servicerGroupTenantId": -4,
+    "servicerTenantId": -4
+  }
+}

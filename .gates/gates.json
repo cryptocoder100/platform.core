@@ -1,0 +1,6 @@
+{
+  "threshold": {
+    "codeCoverage": "30",
+    "codeAnalysis": "860"
+  }
+}

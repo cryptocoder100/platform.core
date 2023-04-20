@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <PackageId>Exos.Platform.VersionEndpoint</PackageId>
+    <Description>Exposes a public endpoint for retrieving build and version information.</Description>
+    <PackageTags>Exos;Architecture;Platform;Build;Version</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Exos.Platform.BuildInformation\Exos.Platform.BuildInformation.csproj" />
+  </ItemGroup>
+
+</Project>

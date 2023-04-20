@@ -1,0 +1,35 @@
+{
+  "id": "",
+  "cosmosDocType": "SubContractorAdditionalInfoPolicyDocument",
+  "vendorId": "SubContractorAdditionalInfoPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "SubContractorAdditionalInfo"
+  },
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": 0,
+    "subClientTenantId": 0,
+    "vendorTenantId": -1,
+    "subContractorTenantId": {
+      "useSourceField": "VendorId"
+    },
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": -1
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": 0,
+    "subClientTenantId": 0,
+    "vendorTenantId": -1,
+    "subContractorTenantId": {
+      "useSourceField": "VendorId"
+    },
+    "servicerGroupTenantId": -1,
+    "servicerTenantId": -1
+  }
+
+}

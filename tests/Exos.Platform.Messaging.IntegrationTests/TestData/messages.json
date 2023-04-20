@@ -1,0 +1,56 @@
+{
+  "happy_path_success": {
+    "message": {
+      "configuration": {
+        "entityName": "Topic1",
+        "entityOwner": "MarketPerformance"
+      },
+      "messageData": {
+        "PublisherMessageUniqueId": "",
+        "Payload": "Success on primary",
+        "AdditionalMetaData": [
+          {
+            "DataFieldName": "OrderBy",
+            "DataFieldValue": "True"
+          }
+        ]
+      }
+    }
+  },
+  "failure_on_primary": {
+    "message": {
+      "configuration": {
+        "entityName": "Topic1",
+        "entityOwner": "MarketPerformance"
+      },
+      "messageData": {
+        "PublisherMessageUniqueId": "",
+        "Payload": "Failure on primary but success on secondary",
+        "AdditionalMetaData": [
+          {
+            "DataFieldName": "OrderBy",
+            "DataFieldValue": "True"
+          }
+        ]
+      }
+    }
+  },
+  "failure_on_primary_and_secondary": {
+    "message": {
+      "configuration": {
+        "entityName": "Topic1",
+        "entityOwner": "MarketPerformance"
+      },
+      "messageData": {
+        "PublisherMessageUniqueId": "",
+        "Payload": "Failure on primary and failure on secondary",
+        "AdditionalMetaData": [
+          {
+            "DataFieldName": "OrderBy",
+            "DataFieldValue": "True"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "cosmosDocType": "DefaultAppointmentDurationPolicyDocument",
+  "clientId": "DefaultAppointmentDurationPolicyDocument",
+
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "DefaultAppointmentDuration"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true
+}

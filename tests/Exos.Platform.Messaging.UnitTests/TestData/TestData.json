@@ -1,0 +1,55 @@
+﻿{
+  "MessageEntities": [
+    {
+      "MessageEntityId": 1,
+      "NameSpace": "ActiveConnectionString",
+      "PassiveNameSpace": "PassiveConnectionString",
+      "MaxRetryCount": 3,
+      "ServiceBusEntityType": "Topic",
+      "EntityName": "Topic1",
+      "MessageContext": null,
+      "Owner": "IctTest",
+      "Status": "ACTIVE",
+      "Comments": "Objects for testing",
+      "CreatedById": 0,
+      "CreatedDate": null,
+      "LastUpdatedById": null,
+      "LastUpdatedDate": null,
+      "Version": "AAAAAE8hehM="
+    },
+    {
+      "MessageEntityId": 2,
+      "NameSpace": "ActiveConnectionString",
+      "PassiveNameSpace": "PassiveConnectionString",
+      "MaxRetryCount": 3,
+      "ServiceBusEntityType": "Topic",
+      "EntityName": "Topic1",
+      "MessageContext": null,
+      "Owner": "IctTest",
+      "Status": "ACTIVE",
+      "Comments": "Wrong URL validation",
+      "CreatedById": 0,
+      "CreatedDate": null,
+      "LastUpdatedById": null,
+      "LastUpdatedDate": null,
+      "Version": "AAAAAE8hehM="
+    },
+    {
+      "MessageEntityId": 2,
+      "NameSpace": "ActiveConnectionString",
+      "PassiveNameSpace": "PassiveConnectionString",
+      "MaxRetryCount": 3,
+      "ServiceBusEntityType": "Topic",
+      "EntityName": "Topic2",
+      "MessageContext": null,
+      "Owner": "IctTest",
+      "Status": "ACTIVE",
+      "Comments": "Passive URL publish validation",
+      "CreatedById": 0,
+      "CreatedDate": null,
+      "LastUpdatedById": null,
+      "LastUpdatedDate": null,
+      "Version": "AAAAAE8hehM="
+    }
+  ]
+}

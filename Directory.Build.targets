@@ -1,0 +1,30 @@
+<Project>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>BuildTimestamp</_Parameter1>
+      <_Parameter2>$([System.DateTime]::Now.ToString("o"))</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <!-- Metadata provided by CI/CD -->
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute" Condition=" '$(BUILD_BUILDNUMBER)' != '' ">
+      <_Parameter1>BuildNumber</_Parameter1>
+      <_Parameter2>$(BUILD_BUILDNUMBER)</_Parameter2>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute" Condition=" '$(BUILD_SOURCEBRANCH)' != '' ">
+      <_Parameter1>SourceBranch</_Parameter1>
+      <_Parameter2>$(BUILD_SOURCEBRANCH)</_Parameter2>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute" Condition=" '$(BUILD_SOURCEVERSION)' != '' ">
+      <_Parameter1>SourceVersion</_Parameter1>
+      <_Parameter2>$(BUILD_SOURCEVERSION)</_Parameter2>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute" Condition=" '$(SYSTEM_TEAMPROJECT)' != '' AND '$(BUILD_REPOSITORY_NAME)' != '' ">
+      <_Parameter1>SourcePath</_Parameter1>
+      <_Parameter2>$(SYSTEM_TEAMPROJECT)/$(BUILD_REPOSITORY_NAME)</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+</Project>

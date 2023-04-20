@@ -1,0 +1,31 @@
+{
+  "id": "",
+  "cosmosDocType": "LineOfBusinessPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "UserManagement",
+    "schemaName": "vm",
+    "tableName": "LineOfBusiness"
+  },
+  "isSubjectToMultiTenancy": true,
+  "isCacheable": true,
+  "isUpdateToTenantIdsPermitted": true,
+  "onInsertTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": -1,
+    "subContractorTenantId": -1,
+    "servicerGroupTenantId": 1,
+    "servicerTenantId": -1
+  },
+  "onUpdateTenantIdsPolicy": {
+    "masterClientTenantId": -1,
+    "subClientTenantId": -1,
+    "vendorTenantId": -1,
+    "subContractorTenantId": -1,
+    "servicerGroupTenantId": 1,
+    "servicerTenantId": -1
+  }
+
+}

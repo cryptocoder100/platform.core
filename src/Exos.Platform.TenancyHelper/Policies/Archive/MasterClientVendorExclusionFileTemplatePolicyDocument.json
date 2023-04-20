@@ -1,0 +1,34 @@
+{
+    "id": "",
+    "cosmosDocType": "MasterClientVendorExclusionFileTemplatePolicyDocument",
+    "clientId": "MasterClientVendorExclusionFileTemplatePolicyDocument",
+    "policyType": "multiTenantPolicy",
+    "entity": {
+        "databaseType": "cosmos",
+        "databaseName": "EXOSEntityManagementDB",
+        "schemaName": "vm",
+        "tableName": "ClientVendorExclusionFileTemplate"
+    },
+    "isSubjectToMultiTenancy": true,
+    "isUpdateToTenantIdsPermitted": true,
+    "onInsertTenantIdsPolicy": {
+        "masterClientTenantId": {
+            "useSourceField": "ClientId"
+        },
+        "subClientTenantId": 0,
+        "vendorTenantId": 0,
+        "subContractorTenantId": 0,
+        "servicerGroupTenantId": -1,
+        "servicerTenantId": -1
+    },
+    "onUpdateTenantIdsPolicy": {
+        "masterClientTenantId": {
+            "useSourceField": "ClientId"
+        },
+        "subClientTenantId": 0,
+        "vendorTenantId": 0,
+        "subContractorTenantId": 0,
+        "servicerGroupTenantId": -1,
+        "servicerTenantId": -1
+    }
+}

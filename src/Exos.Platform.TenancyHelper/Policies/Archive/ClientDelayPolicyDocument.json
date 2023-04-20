@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "cosmosDocType": "ClientDelayPolicyDocument",
+  "clientId": "ClientDelayPolicyDocument",
+
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "ClientDelay"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true
+}

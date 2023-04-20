@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "cosmosDocType": "BorrowerConfirmationClientPreferencePolicyDocument",
+  "clientId": "BorrowerConfirmationClientPreferencePolicyDocument",
+
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "BorrowerConfirmationClientPreference"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true
+}

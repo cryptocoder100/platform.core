@@ -1,0 +1,72 @@
+name: $(Date:yyyy.MM.dd.HHmm)
+
+trigger:
+- main
+
+pool:
+  name: 'EXOS Windows Build Pool'
+
+steps:
+- checkout: self
+  persistCredentials: true
+
+- task: DotNetCoreCLI@1
+  displayName: 'Restore'
+  inputs:
+    command: 'restore'
+    projects: '**/*.sln'
+    feedsToUse: 'select'
+    vstsFeed: '87840c9f-ee7f-4732-850a-6b95c6d286b0/fa470da2-de2f-4230-9a6e-2b541bada7da'
+# - task: DotNetCoreCLI@2
+#   displayName: 'Publish'
+#   inputs:
+#     command: 'publish'
+#     publishWebProjects: false
+#     projects: '**/*.sln'
+#     arguments: '-c Release'
+#     zipAfterPublish: false
+#     modifyOutputPath: false
+
+- task: DotNetCoreCLI@2
+  displayName: 'Pack'
+  inputs:
+    command: 'pack'
+    packagesToPack: '**/*.csproj'
+    configuration: 'Release'
+    packDirectory: '$(build.sourcesDirectory)/nupkg'
+    includesymbols: true
+    versioningScheme: 'off'
+    buildProperties: 'ContinuousIntegrationBuild=true'
+
+# - task: PublishPipelineArtifact@1
+#   inputs:
+#     targetPath: '$(build.sourcesDirectory)/nupkg'
+#     artifact: 'nupkg'
+#     publishLocation: 'pipeline'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet Artifact Publish'
+  inputs:
+    command: 'push'
+    packagesToPush: '$(build.sourcesDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '87840c9f-ee7f-4732-850a-6b95c6d286b0/fa470da2-de2f-4230-9a6e-2b541bada7da'
+    publishPackageMetadata: false
+    allowPackageConflicts: false
+    arguments: '-ApiKey VSTS'
+
+- task: DownloadPipelineArtifact@2
+  displayName: 'Download Pipeline Artifact'
+  inputs:
+    buildType: specific
+    project: 'cfc76cb1-0f85-4c94-a728-93874cc85f0e'
+    definition: 3326
+    artifactName: OctoTemplateUpdate
+    itemPattern: 'TagSourceCode*.ps1'
+
+
+- task: PowerShell@2
+  displayName: 'Tag Sources'
+  inputs:
+    targetType: filePath
+    filePath: '$(build.sourcesDirectory)/../TagSourceCodeWithNugetVersion.ps1'

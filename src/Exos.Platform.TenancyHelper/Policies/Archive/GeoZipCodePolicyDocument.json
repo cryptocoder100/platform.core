@@ -1,0 +1,17 @@
+﻿{
+  "id": "",
+  "cosmosDocType": "GeoZipCodePolicyDocument",
+  "partitionKey": "GeoZipCodePolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "EXOSEntityManagementDB",
+    "schemaName": "vm",
+    "tableName": "GeoZipCode"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": false,
+  "isUpdateToTenantIdsPermitted": false
+
+
+}

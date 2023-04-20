@@ -1,0 +1,15 @@
+{
+  "id": "",
+  "cosmosDocType": "LicenseStatusPolicyDocument",
+  "vendorId": "LicenseStatusPolicyDocument",
+  "policyType": "multiTenantPolicy",
+  "entity": {
+    "databaseType": "cosmos",
+    "databaseName": "database",
+    "schemaName": "vm",
+    "tableName": "LicenseStatus"
+  },
+  "isCacheable": true,
+  "isSubjectToMultiTenancy": true,
+  "isUpdateToTenantIdsPermitted": true
+}
